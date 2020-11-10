@@ -1,0 +1,1 @@
+$('.hide').next().css('display', 'none');

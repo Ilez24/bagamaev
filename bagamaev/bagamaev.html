@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagamaev_insert</title>
+
+</head>
+
+<body>
+
+    <h1>Insert</h1>
+
+    <!--автозаполнение выключено-->
+    <form name="add" action="bagamaev_insert.php" method="POST" autocomplete="off">
+
+        <div>Отделение</div>
+        <input required type="text" name="otdelenie">
+
+
+        <div>ФИО Пациента</div>
+        <select name="fio">
+            <option value="Архипова Арина Викторовна">Архипова Арина Викторовна</option>
+             <option value="Багамаев Джамал Раджабович">Багамаев Джамал Раджабович</option>
+             <option value="Ермаков Вадим Юрьевич">Ермаков Вадим Юрьевич</option>
+             <option value="Созаев Кязим Расулович">Созаев Кязим Расулович</option>
+             <option value="Шальковская Полина Олеговна">Шальковская Полина Олеговна</option>
+         </select>
+
+        <div>Номер палаты</div>
+        <input required id="r" type="range" name="palata" min="0" max="10">
+        <span id="i">0</span>
+
+
+        <div>Врач</div>
+        <input required type="text" name="vrach">
+
+        <div>Диагноз</div>
+        <input required type="text" name="diagnoz">
+
+        <div>Диета</div>
+        <div><input required type="radio" name="dieta" value="Без Диеты"> Без Диеты</div>
+        <div><input required type="radio" name="dieta" value="Особая" checked> Особая</div>
+        <div><input required type="radio" name="dieta" value="С калориями"> С калориями</div>
+        <div><input required type="radio" name="dieta" value="С углеводами"> С углеводами</div>
+
+
+
+        <div>
+            <button type="reset">Очистить поля</button>
+            <button type="submit" name="add">Добавить</button>
+        </div>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $("#r").on("input", function() {
+            let a = $("#r").val();
+            $("#i").text(a);
+        });
+    </script>
+
+</body>
+
+</html>
